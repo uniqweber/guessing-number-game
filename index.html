@@ -7,20 +7,19 @@
     <title>Guess The Number</title>
   </head>
   <body>
-    <main
-      class="bg-gray-100 min-h-screen flex items-center justify-center sm:p-10"
-    >
+    <main class="min-h-screen flex items-center justify-center sm:p-10">
       <div class="= w-full sm:p-10 rounded-xl">
-        <h1 class="uppercase font-game text-4xl text-dark -ml-1">
-          Guess the <span class="text-white">Number</span>
+        <h1 class="font-game text-4xl text-dark -ml-1">
+          Guess the <span class="">Number</span>
         </h1>
-        <p
-          class="text-white font-mono text-sm mb-5 uppercase mt-1 font-bold tracking-wider"
-        >
+        <p class="font-mono text-sm mb-5 mt-1 font-bold tracking-wider">
           Pick a number between 1 and 100 you have 10 chances
         </p>
         <div>
-          <div class="flex items-center justify-between gap-4 h-10">
+          <form
+            id="userForm"
+            class="flex items-center justify-between gap-4 h-10"
+          >
             <input
               type="number"
               id="userInput"
@@ -28,26 +27,39 @@
               class="block w-full border text-xs h-full focus:border-warning outline-none px-4"
             />
             <button
-              class="bg-error flex-shrink-0 text-white uppercase h-full text-sm px-10"
+              id="submitBtn"
+              type="submit"
+              class="bg-error uppercase flex-shrink-0 text-white h-full text-sm px-10"
             >
               Check your guess
             </button>
-          </div>
-          <div class="mt-4 text-dark">
-            <div class="flex items-center gap-2 mb-2">
-              <h2 class="flex-shrink-0">Previous Guess:</h2>
-
-              <div class="grid w-full grid-cols-10 gap-3">
-                <div
-                  id="previousGuess"
-                  class="rounded w-full bg-white border h-9 px-1"
-                ></div>
-              </div>
+          </form>
+          <div class="text-dark space-y-2 mt-4">
+            <p id="won" class="text-sm text-green-500 font-semibold"></p>
+            <p id="error" class="text-sm text-error font-semibold"></p>
+            <p id="hint" class="text-sm text-warning font-semibold"></p>
+            <div class="flex items-center gap-2">
+              <h2 class="flex-shrink-0 font-semibold text-sm">
+                Previous Guess:
+              </h2>
+              <div
+                id="previousGuess"
+                class="grid w-full grid-cols-10 gap-3"
+              ></div>
             </div>
-            <p class="">
-              <span class="">Your Attempt:</span>
-              <span class="text-xl">00</span>
-            </p>
+            <div class="pb-1.5">
+              <span class="font-semibold text-sm">Your Attempt:</span>
+              <span id="attempt" class="text-green-600">10</span>
+            </div>
+            <!-- hidden button -->
+            <button
+              hidden
+              id="starGame"
+              class="bg-green-500 uppercase flex-shrink-0 text-white h-10 text-sm w-full px-12"
+            >
+              Start New Game
+            </button>
+            <!-- hidden button end  -->
           </div>
         </div>
       </div>

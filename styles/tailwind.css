@@ -5,6 +5,9 @@
 
 @layer components {
   body {
-    @apply font-game;
+    @apply font-mono uppercase;
+  }
+  #previousGuess div{
+    @apply rounded w-full bg-white text-error border h-9 flex items-center justify-center px-1;
   }
 }
