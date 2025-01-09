@@ -8,7 +8,7 @@
   </head>
   <body>
     <main class="min-h-screen flex items-center justify-center sm:p-10">
-      <div class="= w-full sm:p-10 rounded-xl">
+      <div class="w-full p-5 sm:p-10 rounded-xl">
         <h1 class="font-game text-4xl text-dark -ml-1">
           Guess the <span class="">Number</span>
         </h1>
@@ -18,33 +18,33 @@
         <div>
           <form
             id="userForm"
-            class="flex items-center justify-between gap-4 h-10"
+            class="flex flex-col sm:flex-row items-center justify-between gap-4"
           >
             <input
               type="number"
               id="userInput"
               placeholder="ENTER A VALID NUMBER"
-              class="block w-full border text-xs h-full focus:border-warning outline-none px-4"
+              class="block w-full border text-xs h-10 focus:border-warning outline-none px-4"
             />
             <button
               id="submitBtn"
               type="submit"
-              class="bg-error uppercase flex-shrink-0 text-white h-full text-sm px-10"
+              class="bg-error w-full uppercase  text-white h-10 text-sm px-10"
             >
               Check your guess
             </button>
           </form>
-          <div class="text-dark space-y-2 mt-4">
+          <div class="text-dark mt-5">
             <p id="won" class="text-sm text-green-500 font-semibold"></p>
             <p id="error" class="text-sm text-error font-semibold"></p>
             <p id="hint" class="text-sm text-warning font-semibold"></p>
-            <div class="flex items-center gap-2">
-              <h2 class="flex-shrink-0 font-semibold text-sm">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+              <h2 class="sm:flex-shrink-0 font-semibold text-sm">
                 Previous Guess:
               </h2>
               <div
                 id="previousGuess"
-                class="grid w-full grid-cols-10 gap-3"
+                class="grid w-full grid-cols-5 md:grid-cols-10 gap-3"
               ></div>
             </div>
             <div class="pb-1.5">
