@@ -7,9 +7,37 @@
     <title>Guess The Number</title>
   </head>
   <body>
-    <main>
-      <div>
-        <h1 class="uppercase text-red-400">hello</h1>
+    <main
+      class="bg-gray-200 min-h-screen flex items-center justify-center sm:p-10"
+    >
+      <div class="bg-white w-full sm:p-20 rounded-xl">
+        <h1
+          class="uppercase font-game text-4xl tracking-tight text-orange-700 -ml-1"
+        >
+          Guess the Number
+        </h1>
+        <p class="text-gray-500 text-sm mb-5 uppercase mt-1 font-[500]">
+          Pick a number between 1 and 100 you have 10 chances
+        </p>
+        <div>
+          <div class="flex items-center justify-between gap-4 h-10">
+            <input
+              type="number"
+              id="userInput"
+              placeholder="ENTER A VALID NUMBER"
+              class="block w-full border text-xs h-full focus:border-blue-500 px-4"
+            />
+            <button
+              class="bg-orange-500 flex-shrink-0 text-white uppercase font-semibold h-full text-sm px-10"
+            >
+              CHeck your guess
+            </button>
+          </div>
+          <div>
+            <p>Previous Guess:</p>
+            <p>Guess Attempt: 10</p>
+          </div>
+        </div>
       </div>
     </main>
     <script src="guess.js"></script>
