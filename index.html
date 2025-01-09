@@ -8,15 +8,15 @@
   </head>
   <body>
     <main
-      class="bg-gray-200 min-h-screen flex items-center justify-center sm:p-10"
+      class="bg-gray-100 min-h-screen flex items-center justify-center sm:p-10"
     >
-      <div class="bg-white w-full sm:p-20 rounded-xl">
-        <h1
-          class="uppercase font-game text-4xl tracking-tight text-orange-700 -ml-1"
-        >
-          Guess the Number
+      <div class="= w-full sm:p-10 rounded-xl">
+        <h1 class="uppercase font-game text-4xl text-dark -ml-1">
+          Guess the <span class="text-white">Number</span>
         </h1>
-        <p class="text-gray-500 text-sm mb-5 uppercase mt-1 font-[500]">
+        <p
+          class="text-white font-mono text-sm mb-5 uppercase mt-1 font-bold tracking-wider"
+        >
           Pick a number between 1 and 100 you have 10 chances
         </p>
         <div>
@@ -25,17 +25,29 @@
               type="number"
               id="userInput"
               placeholder="ENTER A VALID NUMBER"
-              class="block w-full border text-xs h-full focus:border-blue-500 px-4"
+              class="block w-full border text-xs h-full focus:border-warning outline-none px-4"
             />
             <button
-              class="bg-orange-500 flex-shrink-0 text-white uppercase font-semibold h-full text-sm px-10"
+              class="bg-error flex-shrink-0 text-white uppercase h-full text-sm px-10"
             >
-              CHeck your guess
+              Check your guess
             </button>
           </div>
-          <div>
-            <p>Previous Guess:</p>
-            <p>Guess Attempt: 10</p>
+          <div class="mt-4 text-dark">
+            <div class="flex items-center gap-2 mb-2">
+              <h2 class="flex-shrink-0">Previous Guess:</h2>
+
+              <div class="grid w-full grid-cols-10 gap-3">
+                <div
+                  id="previousGuess"
+                  class="rounded w-full bg-white border h-9 px-1"
+                ></div>
+              </div>
+            </div>
+            <p class="">
+              <span class="">Your Attempt:</span>
+              <span class="text-xl">00</span>
+            </p>
           </div>
         </div>
       </div>
