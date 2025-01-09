@@ -7,8 +7,8 @@
     <title>Guess The Number</title>
   </head>
   <body>
-    <main class="min-h-screen flex items-center justify-center sm:p-10">
-      <div class="w-full p-5 sm:p-10 rounded-xl">
+    <main class="min-h-screen bg-gray-200 flex items-center justify-center sm:p-10">
+      <div class="w-full bg-white p-5 sm:p-10 rounded-xl max-w-screen-lg mx-auto">
         <h1 class="font-game text-4xl text-dark -ml-1">
           Guess the <span class="">Number</span>
         </h1>
@@ -24,7 +24,7 @@
               type="number"
               id="userInput"
               placeholder="ENTER A VALID NUMBER"
-              class="block w-full border text-xs h-10 focus:border-warning outline-none px-4"
+              class="block w-full border text-xs h-10 focus:border-dark outline-none px-4"
             />
             <button
               id="submitBtn"
@@ -38,7 +38,7 @@
             <p id="won" class="text-sm text-green-500 font-semibold"></p>
             <p id="error" class="text-sm text-error font-semibold"></p>
             <p id="hint" class="text-sm text-warning font-semibold"></p>
-            <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+            <div class="flex flex-col sm:flex-row sm:items-center gap-4 my-3">
               <h2 class="sm:flex-shrink-0 font-semibold text-sm">
                 Previous Guess:
               </h2>

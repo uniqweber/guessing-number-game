@@ -1,5 +1,4 @@
-// const gameNumber = parseInt(Math.random() * 100 + 1);
-const gameNumber = 15;
+const gameNumber = parseInt(Math.random() * 100 + 1);
 const userForm = document.getElementById("userForm");
 const userInput = document.getElementById("userInput");
 const submitBtn = document.getElementById("submitBtn");
@@ -58,9 +57,12 @@ function winnerCheck(currentGuess) {
 function attemptHave(guess) {
   showPevGuess.innerHTML = "";
   arr.push(guess);
-  gameNumber < guess
-    ? (hint.innerText = "You Guess TOOO High")
-    : (hint.innerText = "You Guess TOOO Low");
+  if (gameNumber < guess) {
+    hint.innerText = "You Guess TOOO High";
+  } else {
+    hint.innerText = "You Guess TOOO Low";
+  }
+
   gameAttempt--;
   showUserAttempt.innerText = gameAttempt;
   if (gameAttempt > 0 && gameAttempt <= 10) {
@@ -79,16 +81,17 @@ function attemptHave(guess) {
     gameMode = false;
     showErr.innerText = "Sorry You Lost the game";
     hint.innerText = "";
-
     userForm.reset();
   }
 }
 
 startGame.addEventListener("click", () => {
+  showErr.innerText = "";
   userInput.removeAttribute("disabled");
   submitBtn.removeAttribute("disabled");
   userInput.classList.remove("cursor-not-allowed");
   submitBtn.classList.remove("cursor-not-allowed");
   userWon.innerText = "";
   startGame.setAttribute("hidden", "");
+  window.location.reload();
 });
